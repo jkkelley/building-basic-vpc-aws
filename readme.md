@@ -98,5 +98,14 @@
     1) Click on the Subnet Associations tab within Route Tables
     2) Click on **Edit subnet association** button
     3) Select the public subnet from the list
+        - e.g. => 172.16.1.0/24
     4) Click **Save associates** button
 
+#### Configuring private route table
+
+- [ ] Ensure you have the private route table selected
+    1) Click on the Subnet Associations tab within Route Tables
+    2) Click on **Edit subnet association** button
+    3) Select the private subnet from the list
+        - e.g. => 172.16.2.0/24
+    4) Click **Save associates** button
