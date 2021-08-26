@@ -172,7 +172,7 @@
     2) Click **Edit outbound rules** button
         a) Click **Add new rule** button
         b) Enter 100 for the rule
-            1) Leave Type as **Custom TCP**
+            bb) Leave Type as **Custom TCP**
     3) Under Port range, input the ephemeral port range
         a) e.g. => 1024-65535
 
@@ -180,5 +180,5 @@
     1) Click **Subnet associations** tab
     2) Click **Edit subnet associations** button
         a) Select the private subnet from the list
-            1) e.g. => 172.16.2.0 - us-east-1b
+            aa) e.g. => 172.16.2.0 - us-east-1b
         b) Click **Save changes** button
