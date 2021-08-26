@@ -109,3 +109,44 @@
     3) Select the private subnet from the list
         - e.g. => 172.16.2.0/24
     4) Click **Save associates** button
+
+#### Configuring Public Network Access Control List N-ACL
+
+- [ ] Select **Network ACLs** underneath Security on the left side menu
+
+- [ ] Click **Create network ACL** at the top right of the screen
+    1) Add a Name (Optional)
+        - e.g. => Public_NACL
+    2) Select the vpc to use under VPC drop down menu
+    3) Click **Create network ACL** button
+    
+- [ ] Ensure the newly created NACL is selected
+    1) Click **Inbound Rules** tab
+    2) Click **Edit inbound rules** button
+        a) Click **Add new rule** button
+        b) Enter 100 for first rule
+        c) Select HTTP for Type
+        d) Leave source as all IPs => 0.0.0.0/0
+    3) Repeat above steps for HTTPs and SSH rules
+        - For the SSH step, you'd really want to lock that down to specific IPs
+          and not give the world access.
+        a) Remember to increment the Rule # by 100 for each new rule
+    4) Click **Save changes** button
+
+- [ ] Ensure the newly created NACL is still selected
+    1) Click **Outbound rules** tab
+    2) Click **Edit outbound rules** button
+        a) Click **Add new rule** button
+        b) Enter 100 for the rule
+            1) Leave Type as **Custom TCP**
+    3) Under Port range, input the ephemeral port range
+        a) e.g. => 1024-65535
+
+- [ ] Ensure the newly created NACL is still selected
+    1) Click **Subnet associations** tab
+    2) Click **Edit subnet associations** button
+        a) Select the public subnet from the list
+            1) e.g. => 172.16.1.0 - us-east-1a
+        b) Click **Save changes** button
+
+#### Configuring Private Network Access Control List N-ACL
