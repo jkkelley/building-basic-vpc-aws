@@ -71,7 +71,7 @@
 - First route table will be the public
 - [ ] Click **Create route table** button, located top right of the screen
     1) Add Name (Optional but **recommended**)
-        a) e.g. => **public-route-table**
+        1) e.g. => **public-route-table**
     2) Under the VPC drop down, select the VPC you have created
     3) Add more tags if necessary (Optional)
     4) Click **Create route table** button
@@ -79,7 +79,7 @@
 - Next create private route table
 - [ ] Click **Create route table** button, located top right of the screen
     1) Add Name (Optional but **recommended**)
-        a) e.g. => **private-route-table**
+        1) e.g. => **private-route-table**
     2) Under the VPC drop down, select the VPC you have created
     3) Add more tags if necessary (Optional)
     4) Click **Create route table** button
@@ -89,10 +89,10 @@
 - [ ] Select the public route table with route tables
     1) Select routes tab
     2) Click **Edit routes** button
-        a) Click **Add route** button
-        b) Under Destination, enter in **0.0.0.0/0** for all traffic
-        c) For Target, Select Internet Gateway, and choose the one you recently created
-        d) Click **Save changes** button
+        1) Click **Add route** button
+        2) Under Destination, enter in **0.0.0.0/0** for all traffic
+        3) For Target, Select Internet Gateway, and choose the one you recently created
+        4) Click **Save changes** button
 
 - [ ] Ensure you have the public route table selected
     1) Click on the Subnet Associations tab within Route Tables
@@ -123,31 +123,31 @@
 - [ ] Ensure the newly created public NACL is selected
     1) Click **Inbound Rules** tab
     2) Click **Edit inbound rules** button
-        a) Click **Add new rule** button
-        b) Enter 100 for first rule
-        c) Select HTTP for Type
-        d) Leave source as all IPs => 0.0.0.0/0
+        1) Click **Add new rule** button
+        2) Enter 100 for first rule
+        3) Select HTTP for Type
+        4) Leave source as all IPs => 0.0.0.0/0
     3) Repeat above steps for HTTPs and SSH rules
         - For the SSH step, you'd really want to lock that down to specific IPs
           and not give the world access.
-        a) Remember to increment the Rule # by 100 for each new rule
+        1) Remember to increment the Rule # by 100 for each new rule
     4) Click **Save changes** button
 
 - [ ] Ensure the newly created public NACL is still selected
     1) Click **Outbound rules** tab
     2) Click **Edit outbound rules** button
-        a) Click **Add new rule** button
-        b) Enter 100 for the rule
+        1) Click **Add new rule** button
+        2) Enter 100 for the rule
             - Leave Type as **Custom TCP**
     3) Under Port range, input the ephemeral port range
-        a) e.g. => 1024-65535
+        1) e.g. => 1024-65535
 
 - [ ] Ensure the newly created public NACL is still selected
     1) Click **Subnet associations** tab
     2) Click **Edit subnet associations** button
-        a) Select the public subnet from the list
+        1) Select the public subnet from the list
             - e.g. => 172.16.1.0 - us-east-1a
-        b) Click **Save changes** button
+        2) Click **Save changes** button
 
 #### Configuring Private Network Access Control List N-ACL
 
@@ -160,25 +160,25 @@
 - [ ] Ensure the newly created private NACL is selected
     1) Click **Inbound Rules** tab
     2) Click **Edit inbound rules** button
-        a) Click **Add new rule** button
-        b) Enter 100 for first rule
-        c) Select SSH for Type
-        d) Under Source, Enter in the public IPv4 CIDR 
+        1) Click **Add new rule** button
+        2) Enter 100 for first rule
+        3) Select SSH for Type
+        4) Under Source, Enter in the public IPv4 CIDR 
             - e.g. 172.16.1.0/24
     3) Click **Save changes** button
 
 - [ ] Ensure the newly created private NACL is still selected
     1) Click **Outbound rules** tab
     2) Click **Edit outbound rules** button
-        a) Click **Add new rule** button
-        b) Enter 100 for the rule
+        1) Click **Add new rule** button
+        2) Enter 100 for the rule
             - Leave Type as **Custom TCP**
     3) Under Port range, input the ephemeral port range
-        a) e.g. => 1024-65535
+        1) e.g. => 1024-65535
 
 - [ ] Ensure the newly created private NACL is still selected
     1) Click **Subnet associations** tab
     2) Click **Edit subnet associations** button
-        a) Select the private subnet from the list
+        1) Select the private subnet from the list
             - e.g. => 172.16.2.0 - us-east-1b
-        b) Click **Save changes** button
+        2) Click **Save changes** button
