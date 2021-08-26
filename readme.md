@@ -120,7 +120,7 @@
     2) Select the vpc to use under VPC drop down menu
     3) Click **Create network ACL** button
     
-- [ ] Ensure the newly created NACL is selected
+- [ ] Ensure the newly created public NACL is selected
     1) Click **Inbound Rules** tab
     2) Click **Edit inbound rules** button
         a) Click **Add new rule** button
@@ -133,7 +133,7 @@
         a) Remember to increment the Rule # by 100 for each new rule
     4) Click **Save changes** button
 
-- [ ] Ensure the newly created NACL is still selected
+- [ ] Ensure the newly created public NACL is still selected
     1) Click **Outbound rules** tab
     2) Click **Edit outbound rules** button
         a) Click **Add new rule** button
@@ -142,7 +142,7 @@
     3) Under Port range, input the ephemeral port range
         a) e.g. => 1024-65535
 
-- [ ] Ensure the newly created NACL is still selected
+- [ ] Ensure the newly created public NACL is still selected
     1) Click **Subnet associations** tab
     2) Click **Edit subnet associations** button
         a) Select the public subnet from the list
@@ -150,3 +150,35 @@
         b) Click **Save changes** button
 
 #### Configuring Private Network Access Control List N-ACL
+
+- [ ] Click **Create network ACL** at the top right of the screen
+    1) Add a Name (Optional)
+        - e.g. => Private_NACL
+    2) Select the vpc to use under VPC drop down menu
+    3) Click **Create network ACL** button
+
+- [ ] Ensure the newly created private NACL is selected
+    1) Click **Inbound Rules** tab
+    2) Click **Edit inbound rules** button
+        a) Click **Add new rule** button
+        b) Enter 100 for first rule
+        c) Select SSH for Type
+        d) Under Source, Enter in the public IPv4 CIDR 
+            a) e.g. 172.16.1.0/24
+    3) Click **Save changes** button
+
+- [ ] Ensure the newly created private NACL is still selected
+    1) Click **Outbound rules** tab
+    2) Click **Edit outbound rules** button
+        a) Click **Add new rule** button
+        b) Enter 100 for the rule
+            1) Leave Type as **Custom TCP**
+    3) Under Port range, input the ephemeral port range
+        a) e.g. => 1024-65535
+
+- [ ] Ensure the newly created private NACL is still selected
+    1) Click **Subnet associations** tab
+    2) Click **Edit subnet associations** button
+        a) Select the private subnet from the list
+            1) e.g. => 172.16.2.0 - us-east-1b
+        b) Click **Save changes** button
