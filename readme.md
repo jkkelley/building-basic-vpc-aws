@@ -48,20 +48,20 @@
     3) Under Subnet subnet settings
         1) Select the **First** availability zone
         2) Fill in IPv4 CIDR block
-            - e.g. => 172.16**.1.**0/24
-            - e.g. => 10.0**.1.**0/24
+            - e.g. => 172.16 **.1.**0/24
+            - e.g. => 10.0 **.1.**0/24
         3) Fill in Name tag, be specific about what subnet you're creating
-            - e.g. => <IPv4 CIDR block> - <AZ name> => 172.16.1.0 us-east-1**a**
+            - e.g. => 172.16.1.0 us-east-1**a**
         4) Click **Create subnet** button
 
 - [ ] Repeat the steps above till you reach 3.a
     1) Under Subnet subnet settings
         1) Select the **Second** availability zone
         2) Fill in IPv4 CIDR block
-            - e.g. => 172.16**.2.**0/24
-            - e.g. => 10.0**.2.**0/24
+            - e.g. => 172.16 **.2.**0/24
+            - e.g. => 10.0 **.2.**0/24
         3) Fill in Name tag, be specific about what subnet you're creating
-            - e.g. => <IPv4 CIDR block> - <AZ name> => 172.16.2.0 - us-east-1**b**
+            - e.g. => 172.16.2.0 - us-east-1**b**
         4) Click **Create subnet** button
 
 #### Create Route
@@ -84,4 +84,19 @@
     3) Add more tags if necessary (Optional)
     4) Click **Create route table** button
 
+#### Configuring public route table
+
+- [ ] Select the public route table with route tables
+    1) Select routes tab
+    2) Click **Edit routes** button
+        a) Click **Add route** button
+        b) Under Destination, enter in **0.0.0.0/0** for all traffic
+        c) For Target, Select Internet Gateway, and choose the one you recently created
+        d) Click **Save changes** button
+
+- [ ] Ensure you have the public route table selected
+    1) Click on the Subnet Associations tab within Route Tables
+    2) Click on **Edit subnet association** button
+    3) Select the public subnet from the list
+    4) Click **Save associates** button
 
