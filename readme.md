@@ -48,8 +48,8 @@
     3) Under Subnet subnet settings
         1) Select the **First** availability zone
         2) Fill in IPv4 CIDR block
-            - e.g. => 172.16 **.1.**0/24
-            - e.g. => 10.0 **.1.**0/24
+            - e.g. => 172.16 **.1.** 0/24
+            - e.g. => 10.0 **.1.** 0/24
         3) Fill in Name tag, be specific about what subnet you're creating
             - e.g. => 172.16.1.0 us-east-1**a**
         4) Click **Create subnet** button
@@ -58,8 +58,8 @@
     1) Under Subnet subnet settings
         1) Select the **Second** availability zone
         2) Fill in IPv4 CIDR block
-            - e.g. => 172.16 **.2.**0/24
-            - e.g. => 10.0 **.2.**0/24
+            - e.g. => 172.16 **.2.** 0/24
+            - e.g. => 10.0 **.2.** 0/24
         3) Fill in Name tag, be specific about what subnet you're creating
             - e.g. => 172.16.2.0 - us-east-1**b**
         4) Click **Create subnet** button
