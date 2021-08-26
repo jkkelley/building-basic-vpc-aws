@@ -46,13 +46,13 @@
        - Associated VPC CIDRs will populate underneath
 
     3) Under Subnet subnet settings
-    a) Select the **First** availability zone
-    b) Fill in IPv4 CIDR block
-             - e.g. => 172.16**.1.**0/24
-             - e.g. => 10.0**.1.**0/24
-    c) Fill in Name tag, be specific about what subnet you're creating
-              e.g. => <IPv4 CIDR block> - <AZ name> => 172.16.1.0 - us-east-1**a**
-    d) Click **Create subnet** button
+        1) Select the **First** availability zone
+        2) Fill in IPv4 CIDR block
+            - e.g. => 172.16**.1.**0/24
+            - e.g. => 10.0**.1.**0/24
+        3) Fill in Name tag, be specific about what subnet you're creating
+            - e.g. => <IPv4 CIDR block> - <AZ name> => 172.16.1.0 us-east-1**a**
+        4) Click **Create subnet** button
 
 - [ ] Repeat the steps above till you reach 3.1
     a) Select the **Second** availability zone
