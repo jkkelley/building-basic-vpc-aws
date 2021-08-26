@@ -138,7 +138,7 @@
     2) Click **Edit outbound rules** button
         a) Click **Add new rule** button
         b) Enter 100 for the rule
-            1) Leave Type as **Custom TCP**
+            - Leave Type as **Custom TCP**
     3) Under Port range, input the ephemeral port range
         a) e.g. => 1024-65535
 
@@ -146,7 +146,7 @@
     1) Click **Subnet associations** tab
     2) Click **Edit subnet associations** button
         a) Select the public subnet from the list
-            1) e.g. => 172.16.1.0 - us-east-1a
+            - e.g. => 172.16.1.0 - us-east-1a
         b) Click **Save changes** button
 
 #### Configuring Private Network Access Control List N-ACL
@@ -164,7 +164,7 @@
         b) Enter 100 for first rule
         c) Select SSH for Type
         d) Under Source, Enter in the public IPv4 CIDR 
-            a) e.g. 172.16.1.0/24
+            - e.g. 172.16.1.0/24
     3) Click **Save changes** button
 
 - [ ] Ensure the newly created private NACL is still selected
@@ -172,7 +172,7 @@
     2) Click **Edit outbound rules** button
         a) Click **Add new rule** button
         b) Enter 100 for the rule
-            bb) Leave Type as **Custom TCP**
+            - Leave Type as **Custom TCP**
     3) Under Port range, input the ephemeral port range
         a) e.g. => 1024-65535
 
@@ -180,5 +180,5 @@
     1) Click **Subnet associations** tab
     2) Click **Edit subnet associations** button
         a) Select the private subnet from the list
-            aa) e.g. => 172.16.2.0 - us-east-1b
+            - e.g. => 172.16.2.0 - us-east-1b
         b) Click **Save changes** button
