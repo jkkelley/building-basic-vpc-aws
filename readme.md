@@ -64,5 +64,24 @@
             - e.g. => <IPv4 CIDR block> - <AZ name> => 172.16.2.0 - us-east-1**b**
         4) Click **Create subnet** button
 
+#### Create Route
+
+- [ ] Click **Route Tables** from the menu on the left
+
+- First route table will be the public
+- [ ] Click **Create route table** button, located top right of the screen
+    1) Add Name (Optional but **recommended**)
+        a) e.g. => **public-route-table**
+    2) Under the VPC drop down, select the VPC you have created
+    3) Add more tags if necessary (Optional)
+    4) Click **Create route table** button
+
+- Next create private route table
+- [ ] Click **Create route table** button, located top right of the screen
+    1) Add Name (Optional but **recommended**)
+        a) e.g. => **private-route-table**
+    2) Under the VPC drop down, select the VPC you have created
+    3) Add more tags if necessary (Optional)
+    4) Click **Create route table** button
 
 
