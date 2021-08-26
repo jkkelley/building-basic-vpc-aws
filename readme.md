@@ -45,7 +45,7 @@
        under **VPC ID**
        - Associated VPC CIDRs will populate underneath
 
-     3) Under Subnet subnet settings
+    3) Under Subnet subnet settings
         3.1) Select the **First** availability zone
         3.2) Fill in IPv4 CIDR block
              - e.g. => 172.16**.1.**0/24
